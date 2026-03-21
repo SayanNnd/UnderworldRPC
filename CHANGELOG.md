@@ -1,12 +1,26 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+All notable changes to this project will be documented in this file.  
 
 ## [Unreleased]
 
-### Added
+### Planned
+- Weapon detection
+- Boon tracking
+- Run timer integration
+- Boss fight detection
+- Improved Rich Presence formatting
 
-- First version of the mod!
+---
+
+## [0.1.0] - 2026-xx-xx
+
+### Added
+- Initial Discord Rich Presence (DRP) system
+- C++ RPC client for Discord integration
+- JSON-based communication between Lua mod and RPC client
+- Automatic RPC executable launch from Lua mod
+- Basic biome tracking from game state
+
+### Notes
+- First working version of Hades II Discord Rich Presence mod

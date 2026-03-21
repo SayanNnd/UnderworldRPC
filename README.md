@@ -4,12 +4,12 @@ A Hades II mod that displays in-game status (biome, run info, builds) on Discord
 
 ## Features
 
-- Wow.
-- Much cool.
-  - Very doge.
+- Displays current biome in Discord Rich Presence
+- Updates automatically as you progress through rooms
+- Lightweight external RPC client (C++) for fast and reliable updates
+- Automatic background launch of RPC client (no manual setup needed)
+- Thunderstore-compatible mod structure
 
-## Install
+## Installation
 
-- Do this.
-- Do that.
-  - Nope, not that.
+Use r2modman by ebkr from [Thunderstore](https://thunderstore.io).
