@@ -1,6 +1,6 @@
-local file = io.open("drp.json", "w")
-
-local jsonPath = "drp.json"
+local modPath = debug.getinfo(1, "S").source:match("@?(.+[\\/])")
+local jsonPath = modPath .. "drp.json"
+local exePath = modPath .. "rpc.exe"
 
 local function WriteData()
     if not CurrentRun or not CurrentRun.CurrentRoom then return end
@@ -26,10 +26,8 @@ modutil.mod.Path.Wrap("StartRoom", function(base, currentRun, currentRoom)
     WriteData()
 end)
 
-local modPath = _PLUGIN and _PLUGIN.path or debug.getinfo(1, "S").source:match("@?(.+[\\/])")
-local exePath = modPath .. "rpc.exe"
-
 if not _G.DRP_STARTED then
     _G.DRP_STARTED = true
-    os.execute('start "" "' .. exePath .. '"')
+    local ok = os.execute('start "" "' .. exePath .. '"')
+    print("RPC launch result: " .. tostring(ok))
 end
