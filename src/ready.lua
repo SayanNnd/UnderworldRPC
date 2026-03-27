@@ -21,13 +21,10 @@ local function WriteData()
     end
 end
 
--- Hook into room start
 modutil.mod.Path.Wrap("StartRoom", function(base, currentRun, currentRoom)
     base(currentRun, currentRoom)
     WriteData()
 end)
-
--- Auto start RPC
 
 local modPath = _PLUGIN and _PLUGIN.path or debug.getinfo(1, "S").source:match("@?(.+[\\/])")
 local exePath = modPath .. "rpc.exe"
